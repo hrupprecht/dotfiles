@@ -1,14 +1,18 @@
 [user]
-   name = Piotr Szulc
-   email = szulo123@gmail.com
+   name = Holger Rupprecht
+   email = holger.rupprecht@gmx.de
 
 [core]
    pager = less -XMRSI
    editor = vim --nofork
    autocrlf = input
+	excludesfile = /etc/gitignore
 
 [color]
    ui = auto
+	diff = auto
+	branch = auto
+	interactive = true
 
 [color "status"]
    added = green
@@ -35,6 +39,7 @@
    root = rev-parse --show-toplevel
    ctags = !.git/hooks/ctags
    reset1 = reset HEAD^
+	timeline = log --oneline --graph --decorate
 
    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
@@ -45,3 +50,9 @@
 
 [push]
    default = current
+
+[mergetool "vimdiff"]
+	cmd = /usr/bin/vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+
+[merge]
+   tool = vimdiff

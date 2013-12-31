@@ -7,8 +7,8 @@
 --output-line-ending=unix
 
 --maximum-line-length=0
---indent-columns=3
---continuation-indentation=3
+--indent-columns=2
+--continuation-indentation=2
 --closing-token-indentation=0
 
 --vertical-tightness=0
