@@ -73,6 +73,7 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 
 Bundle 'html_annoyance'
@@ -297,4 +298,3 @@ nnoremap <silent> _d :.!perl -MO=Deparse 2>/dev/null<cr>
 vnoremap <silent> _d :!perl -MO=Deparse 2>/dev/null<cr>
 
 set enc=utf-8
-set fileencoding=utf-8
