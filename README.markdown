@@ -4,7 +4,7 @@ My repository for useful config files
 
 ## How to install
 
-      git clone git://github.com/greenolvi/dotfiles.git
+      git clone git://github.com/hrupprecht/dotfiles.git
       cd dotfiles
       git submodule init
       git submodule update
