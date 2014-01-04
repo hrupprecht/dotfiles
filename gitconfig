@@ -56,3 +56,5 @@
 
 [merge]
    tool = vimdiff
+[github]
+	user = hrupprecht

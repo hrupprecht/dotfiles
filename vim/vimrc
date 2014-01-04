@@ -73,6 +73,7 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-pastie'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 
