@@ -76,6 +76,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-pastie'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'mileszs/ack.vim'
 
 Bundle 'html_annoyance'
 Bundle 'taglist.vim'
@@ -126,9 +127,9 @@ set noswapfile
 set wildmode=list:longest
 
 " Use mouse
-if has('mouse')
-   set mouse=a
-endif
+"if has('mouse')
+"   set mouse=a
+"endif
 
 " Tab options
 set tabstop=2
