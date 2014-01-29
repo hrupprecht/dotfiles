@@ -5,7 +5,7 @@ set ruler
 set showmatch
 
 " display mode INSERT/REPLACE/...
-set showmode
+"set showmode
 
 " changes special characters in search patterns (default)
 " set magic
