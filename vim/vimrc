@@ -2,10 +2,10 @@
 set ruler
 
 " show matching brackets
-set showmatch
+"set showmatch
 
 " display mode INSERT/REPLACE/...
-"set showmode
+set showmode
 
 " changes special characters in search patterns (default)
 " set magic
@@ -77,6 +77,7 @@ Bundle 'tpope/vim-pastie'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'plasticboy/vim-markdown'
 
 Bundle 'html_annoyance'
 Bundle 'taglist.vim'
@@ -126,18 +127,11 @@ set noswapfile
 " Tab-completion in command line mode
 set wildmode=list:longest
 
-" Use mouse
-"if has('mouse')
-"   set mouse=a
-"endif
-
 " Tab options
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set number 
-set smartindent
 
 " Stop using arrow keys!
 map <up> <nop>
@@ -206,6 +200,17 @@ let perl_fold = 1
 let perl_fold_anonymous_subs = 1
 let perl_nofold_packages = 1
 let perl_include_pod = 1
+let perl_include_pod = 1
+" syntax color complex things like @{${"foo"}}
+let perl_extended_vars = 1
+
+" Tidy selected lines (or entire file) with _t:
+nnoremap <silent> _t :%!perltidy -q<Enter>
+vnoremap <silent> _t :!perltidy -q<Enter>
+
+" Deparse obfuscated code
+nnoremap <silent> _d :.!perl -MO=Deparse 2>/dev/null<cr>
+vnoremap <silent> _d :!perl -MO=Deparse 2>/dev/null<cr>
 
 " Perl syntax check with make
 autocmd BufNewFile,BufRead *.p? compiler perl
@@ -285,18 +290,6 @@ let g:gist_post_private = 1
 "If you want to manipulate multiple files in a gist:
 let g:gist_get_multiplefile = 1
 
-" my perl includes pod
-let perl_include_pod = 1
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_initial_foldlevel=1
 
-" syntax color complex things like @{${"foo"}}
-let perl_extended_vars = 1
-
-" Tidy selected lines (or entire file) with _t:
-nnoremap <silent> _t :%!perltidy -q<Enter>
-vnoremap <silent> _t :!perltidy -q<Enter>
-
-" Deparse obfuscated code
-nnoremap <silent> _d :.!perl -MO=Deparse 2>/dev/null<cr>
-vnoremap <silent> _d :!perl -MO=Deparse 2>/dev/null<cr>
-
-set enc=utf-8
