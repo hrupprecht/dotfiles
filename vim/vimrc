@@ -85,6 +85,7 @@ Bundle 'html_annoyance'
 Bundle 'taglist.vim'
 Bundle 'vim-pipe'
 Bundle 'vimwiki'
+Bundle 'vim-perl/vim-perl'
 
 " Color schemes
 Bundle 'jonathanfilip/vim-lucius'
