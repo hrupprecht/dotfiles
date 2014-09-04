@@ -78,6 +78,8 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'groenewege/vim-less'
+Bundle 'yko/mojo.vim'
 
 Bundle 'html_annoyance'
 Bundle 'taglist.vim'
@@ -96,6 +98,7 @@ if iCanHazVundle == 0
   :BundleInstall
 endif
 
+let mojo_highlight_data=1
 
 syntax on
 filetype plugin on
