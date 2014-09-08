@@ -43,6 +43,13 @@ if filereadable("/etc/vimrc.local")
   source /etc/vimrc.local
 endif
 
+" Tab options are overwritten by vim-sleuth
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+
 let Tlist_Auto_Open = 1
 let Tlist_Exit_OnlyWindow = 1
 filetype off
@@ -74,6 +81,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-pastie'
+Bundle 'tpope/vim-sleuth'
+Bundle 'elzr/vim-json'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'mileszs/ack.vim'
@@ -91,7 +100,7 @@ Bundle 'vim-perl/vim-perl'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'w0ng/vim-hybrid.git'
-
+Bundle 'flazz/vim-colorschemes'
 "Add your bundles here
 if iCanHazVundle == 0
    echo "Installing Bundles, please ignore key map error messages"
@@ -130,12 +139,6 @@ set noswapfile
 
 " Tab-completion in command line mode
 set wildmode=list:longest
-
-" Tab options
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
 
 " Stop using arrow keys!
 map <up> <nop>
