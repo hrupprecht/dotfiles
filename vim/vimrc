@@ -72,6 +72,7 @@ Bundle 'gmarik/vundle'
 " Used bundles
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'dockyard/vim-easydir'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
@@ -89,6 +90,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'groenewege/vim-less'
 Bundle 'yko/mojo.vim'
+Bundle 'nono/jquery.vim'
+Bundle 'ap/vim-css-color'
 
 Bundle 'html_annoyance'
 Bundle 'taglist.vim'
@@ -114,8 +117,10 @@ syntax on
 filetype plugin on
 filetype indent on
 
-set langmenu=en_US.UTF-8
-let $LANG='en_US'
+"set langmenu=en_US.UTF-8
+set langmenu=de_DE.UTF-8
+"let $LANG='en_US'
+let $LANG='de_DE'
 
 let mapleader=","
 
@@ -230,6 +235,8 @@ set complete+=k           " scan the files given with the 'dictionary' option
 se showcmd
 
 au BufNewFile,BufRead *.tt setf tt2
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
 
 " " OPTIONAL: This enables automatic indentation as you type.
 filetype indent on
@@ -248,7 +255,7 @@ autocmd BufNewFile,BufRead *.p? compiler perl
 
 " Perl test files (assumes vim is running from project root)
 autocmd BufNewFile,BufRead *.t setf perl
-autocmd BufNewFile,BufRead *.t map <buffer> <F5> :!prove -It -l %<CR>
+autocmd BufNewFile,BufRead *.t map <buffer> <F5> :!prove -It -lv %<CR>
 
 " Toolkit template syntax
 autocmd BufNewFile,BufRead *.tt setf tt2html
@@ -304,7 +311,26 @@ autocmd BufNewFile,BufRead *.t let b:vimpipe_filetype="tap"
 
 " Vim airline
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+let g:airline_theme             = 'powerlineish'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+
 
 "gist
 let g:gist_detect_filetype = 1
@@ -323,5 +349,3 @@ let g:gist_get_multiplefile = 1
 
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_initial_foldlevel=1
-
-
