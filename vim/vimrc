@@ -310,6 +310,8 @@ autocmd BufNewFile,BufRead *.t let b:vimpipe_command="./Build test --test-files=
 autocmd BufNewFile,BufRead *.t let b:vimpipe_filetype="tap"
 
 " Vim airline
+let g:airline_symbols = {}
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
 let g:airline_theme             = 'powerlineish'
