@@ -73,6 +73,7 @@ Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'dockyard/vim-easydir'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
@@ -357,3 +358,10 @@ let g:gist_get_multiplefile = 1
 
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_initial_foldlevel=1
+
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hr <Plug>GitGutterUndoHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+
