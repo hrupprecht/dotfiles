@@ -39,10 +39,13 @@
    root = rev-parse --show-toplevel
    ctags = !.git/hooks/ctags
    reset1 = reset HEAD^
-	timeline = log --oneline --graph --decorate
+   timeline = log --oneline --graph --decorate
 
    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+   build = ship
+   cl = ship
+   start = ship
 
 [diff]
    renames = copy
