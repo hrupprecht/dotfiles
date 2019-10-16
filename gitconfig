@@ -1,7 +1,6 @@
 [user]
-   name = Holger Rupprecht
-   email = holger.rupprecht@gmx.de
-
+	email = holger.rupprecht@sap.com
+	name = Holger Rupprecht
 [core]
    pager = less -XMRSI
    editor = vim --nofork
@@ -54,10 +53,14 @@
 [push]
    default = current
 
+[pull]
+	rebase = true
+
 [mergetool "vimdiff"]
 	cmd = /usr/bin/vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 
 [merge]
    tool = vimdiff
+
 [github]
 	user = hrupprecht
