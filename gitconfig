@@ -1,6 +1,7 @@
 [user]
 	email = holger.rupprecht@sap.com
 	name = Holger Rupprecht
+	signingKey = 41E24413CDA00697E7E60A606A34063C2F051BA5
 [core]
    pager = less -XMRSI
    editor = vim --nofork
@@ -64,3 +65,6 @@
 
 [github]
 	user = hrupprecht
+
+[commit]
+	gpgSign = true

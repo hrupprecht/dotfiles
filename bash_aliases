@@ -14,3 +14,5 @@ alias :e='vim'
 alias :q='echo "You'"'"'re not in VIM dummy!"'
 
 alias tmux='tmux -2'
+
+alias shuttle="sshuttle -D -l 0.0.0.0 -r d069844@jump01.cc.eu-de-1.cloud.sap 10.46.0.0/16 10.47.0.0/16 10.216.0.0/19"
