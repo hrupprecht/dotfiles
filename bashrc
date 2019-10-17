@@ -1,4 +1,4 @@
-source ~/pythons/3.7.4/bin/activate
+source ~/pythons/3.8/bin/activate
 # Set config variables first
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share

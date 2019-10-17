@@ -16,3 +16,12 @@ if [ -r ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
+
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export DYLD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib"
